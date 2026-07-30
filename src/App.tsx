@@ -10,6 +10,7 @@ import {useTheme} from "./hooks/useTheme.ts";
 function App() {
     // 0-home, 1-about, 2-projects, 3-contact me
     const [currentSection, setCurrentSection] = useState<number>(0);
+    const [navCollapsed, setNavCollapsed] = useState(false);
     const {theme} = useTheme();
 
     console.log(theme);
@@ -24,14 +25,26 @@ function App() {
     return (
         <div className={`h-screen ${currentSection % 2 == 0 ? "bg-gray-100" : "bg-white"} transition-all duration-700`}
              style={mainStyle}>
-            <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
-            <main className="pt-24 xl:pt-0 xl:ml-32 h-screen overflow-y-auto snap-y snap-mandatory scroll-pt-15 xl:scroll-pt-0">
+            <Navbar
+                currentSection={currentSection}
+                setCurrentSection={setCurrentSection}
+                collapsed={navCollapsed}
+                onToggleCollapse={() => setNavCollapsed((c) => !c)}
+            />
+            <main
+                className={`
+                    h-screen overflow-y-auto snap-y snap-mandatory
+                    scroll-pt-20 xl:scroll-pt-0
+                    transition-all duration-500 ease-in-out
+                    ${navCollapsed ? "xl:ml-0" : "xl:ml-32"}
+                `}
+            >
                 <HeroSection />
                 <HeroSection />
             </main>
             <ThemeToggleButton />
         </div>
-    )
+    );
 }
 
 export default App
