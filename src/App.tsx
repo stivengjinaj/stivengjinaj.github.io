@@ -8,12 +8,10 @@ function App() {
     const [currentSection, setCurrentSection] = useState<number>(0);
 
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className={`h-screen ${currentSection % 2 == 0 ? "bg-gray-100" : "bg-white"}`}>
             <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
-            <main className="xl:ml-12 xl:pt-20">
-                <div className="flex flex-col gap-24">
-                    <HeroSection />
-                </div>
+            <main className="xl:ml-32 h-screen overflow-y-auto snap-y snap-mandatory">
+                <HeroSection />
             </main>
         </div>
     )

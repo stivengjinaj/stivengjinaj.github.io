@@ -1,7 +1,7 @@
 
 function HeroText() {
     return (
-        <div className="flex flex-col items-start justify-center space-y-6 text-left">
+        <div className="flex flex-col items-center lg:items-start justify-center space-y-6 text-center lg:text-left">
             <div className="space-y-2">
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 leading-tight">
                     Hello there! <br />
