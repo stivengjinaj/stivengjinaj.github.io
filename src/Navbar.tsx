@@ -8,7 +8,15 @@ import {
 } from "@mui/icons-material";
 import {ChevronLeft, ChevronRight, HomeIcon} from "lucide-react";
 
-function Navbar({ currentSection, setCurrentSection, collapsed, onToggleCollapse }: NavbarProps) {
+function Navbar({
+    currentSection,
+    setCurrentSection,
+    onLandingClick,
+    onAboutClick,
+    onProjectClick,
+    collapsed,
+    onToggleCollapse
+}: NavbarProps) {
     return (
         <>
             <nav
@@ -42,11 +50,14 @@ function Navbar({ currentSection, setCurrentSection, collapsed, onToggleCollapse
                     <div className="flex items-center gap-8 text-emerald-950 xl:flex-col xl:gap-20">
                         <button
                             className="hover:text-amber-900 dark:text-white dark:hover:text-amber-700 transition-colors"
-                            onClick={() => setCurrentSection(0)}
+                            onClick={() => {
+                                setCurrentSection("landing")
+                                onLandingClick()
+                            }}
                             aria-label="Home"
                         >
-                            {currentSection === 0 ? (
-                                <HomeIcon size={24} strokeWidth={3} />
+                            {currentSection === "landing" ? (
+                                <HomeIcon size={24} strokeWidth={3.5} />
                             ) : (
                                 <HomeIcon size={24} />
                             )}
@@ -54,10 +65,13 @@ function Navbar({ currentSection, setCurrentSection, collapsed, onToggleCollapse
 
                         <button
                             className="hover:text-amber-900 dark:text-white dark:hover:text-amber-700 transition-colors"
-                            onClick={() => setCurrentSection(1)}
+                            onClick={() => {
+                                setCurrentSection("about")
+                                onAboutClick()
+                            }}
                             aria-label="About"
                         >
-                            {currentSection === 1 ? (
+                            {currentSection === "about" ? (
                                 <Info fontSize="medium" />
                             ) : (
                                 <InfoOutlined fontSize="medium" />
@@ -66,10 +80,13 @@ function Navbar({ currentSection, setCurrentSection, collapsed, onToggleCollapse
 
                         <button
                             className="hover:text-amber-900 dark:text-white dark:hover:text-amber-700 transition-colors"
-                            onClick={() => setCurrentSection(2)}
+                            onClick={() => {
+                                setCurrentSection("projects")
+                                onProjectClick()
+                            }}
                             aria-label="Projects"
                         >
-                            {currentSection === 2 ? (
+                            {currentSection === "projects" ? (
                                 <AccountTree fontSize="medium" />
                             ) : (
                                 <AccountTreeOutlined fontSize="medium" />
@@ -77,7 +94,7 @@ function Navbar({ currentSection, setCurrentSection, collapsed, onToggleCollapse
                         </button>
 
                         <button
-                            className="p-2.5 xl:px-3 xl:py-3 rounded-full bg-amber-950 hover:bg-amber-700 hover:text-amber-900  text-white hover:text-white dark:hover:text-white dark:hover:text-amber-700 transition-colors"
+                            className="p-2.5 xl:px-3 xl:py-3 rounded-full bg-emerald-950 hover:bg-emerald-700  text-white hover:text-white dark:hover:text-white dark:hover:text-amber-700 transition-colors"
                             aria-label="Resume"
                         >
                             <ListAltOutlined fontSize="medium" />
