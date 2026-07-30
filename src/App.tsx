@@ -1,6 +1,6 @@
 import './App.css'
 import Navbar from "./Navbar.tsx";
-import HeroSection from "./Landing/HeroSection.tsx";
+import LandingSection from "./Landing/LandingSection.tsx";
 import {useEffect, useRef, useState} from "react";
 import backgroundImage from "./assets/backgroundLight.png";
 import backgroundDark from "../src/assets/backgroundDark.png";
@@ -29,7 +29,9 @@ function App() {
         const observer = new IntersectionObserver (
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting) { /* empty */ }
+                    if (entry.isIntersecting) {
+                        setCurrentSection(entry.target.id as SectionLabel);
+                    }
                 })
             },
             { threshold: 0.5 }
@@ -62,7 +64,7 @@ function App() {
                     ${navCollapsed ? "xl:ml-0" : "xl:ml-32"}
                 `}
             >
-                <HeroSection
+                <LandingSection
                     ref={landingRef}
                     onAboutClick={() => {
                         setCurrentSection("about");
