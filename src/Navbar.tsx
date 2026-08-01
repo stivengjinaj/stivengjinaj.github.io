@@ -21,7 +21,7 @@ function Navbar({
         <>
             <nav
                 className={
-                `fixed top-4 left-1/2 -translate-x-1/2 z-50
+                `fixed bottom-4 left-1/2 -translate-x-1/2 z-50
                 w-fit max-w-[92vw]
                 bg-white/25 backdrop-blur-2xl backdrop-saturate-200
                 border border-white/40
@@ -31,7 +31,7 @@ function Navbar({
                 xl:top-1/2 xl:left-6 xl:translate-x-0 xl:-translate-y-1/2
                 xl:w-24 xl:h-[70vh] xl:max-w-none xl:px-1 xl:py-4
                 xl:rounded-[40px] xl:bg-white
-                xl:dark:bg-black
+                xl:dark:bg-zinc-900
                 xl:backdrop-blur-none
                 xl:backdrop-saturate-100
                 xl:dark:shadow-gray-800/100

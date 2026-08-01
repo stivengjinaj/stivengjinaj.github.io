@@ -1,8 +1,8 @@
-import type {RefObject} from "react";
+import type {ReactNode, RefObject} from "react";
 
 export type SectionLabel = 'landing' | 'about' | 'projects';
 export type ThemeType = 'light' | 'dark';
-
+export type ThemeColor = 'red' | 'blue';
 export type ThemeContextType = {
     theme: ThemeType;
     toggleTheme: () => void;
@@ -31,4 +31,27 @@ export interface HeroTextProps {
 
 export interface RefSection {
     ref: RefObject<HTMLDivElement | null>;
+}
+
+export interface UniversityProps {
+    themeColor: ThemeColor;
+    university: string;
+    universityLogo: string;
+    universityStyle: string;
+    date: string;
+    major: string;
+    orientation: string | ReactNode;
+}
+
+export interface JobProps {
+    date: string;
+    jobTitle: string;
+    company: string;
+    description: string;
+}
+
+export interface PublicationProp {
+    title: string;
+    conference: string;
+    link: string;
 }
