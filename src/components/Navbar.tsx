@@ -1,4 +1,4 @@
-import type { NavbarProps } from "./types/types.ts";
+import type { NavbarProps } from "../types/types.ts";
 import {
     AccountTree,
     AccountTreeOutlined,

@@ -55,3 +55,8 @@ export interface PublicationProp {
     conference: string;
     link: string;
 }
+
+export interface ViewMoreProps {
+    title: string;
+    onClick: () => void;
+}

@@ -1,10 +1,10 @@
 import './App.css'
-import Navbar from "./Navbar.tsx";
+import Navbar from "./components/Navbar.tsx";
 import LandingSection from "./Landing/LandingSection.tsx";
 import {useEffect, useRef, useState} from "react";
 import backgroundImage from "./assets/backgroundLight.png";
 import backgroundDark from "../src/assets/backgroundDark.png";
-import ThemeToggleButton from "./ThemeToggleButton.tsx";
+import ThemeToggleButton from "./components/ThemeToggleButton.tsx";
 import {useTheme} from "./hooks/useTheme.ts";
 import type {SectionLabel} from "./types/types.ts";
 import AboutSection from "./AboutSection/AboutSection.tsx";

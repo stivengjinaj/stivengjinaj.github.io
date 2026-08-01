@@ -24,7 +24,7 @@ function UniversityTimeline({themeColor, university, universityLogo, universityS
             </div>
 
             <div className="lg:px-10 w-full">
-                <div className="flex gap-4 bg-gray-200 dark:bg-zinc-900 dark:border dark:border-zinc-700 rounded-xl mt-5 md:p-10 p-5">
+                <div className="flex gap-4 bg-zinc-100 dark:bg-zinc-900 dark:border dark:border-zinc-700 rounded-xl mt-5 md:p-10 p-5">
                     <img src={universityLogo} alt="polito" className="w-16 h-16 md:w-20 md:h-20 object-contain flex-shrink-0"/>
                     <div className="flex flex-col items-start justify-start">
                         <span className={`${colors.date} font-bold text-xs`}>{date}</span>

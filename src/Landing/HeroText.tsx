@@ -21,7 +21,7 @@ function HeroText({onAboutClick, onProjectClick}: HeroTextProps) {
                 </button>
                 <button
                     onClick={onAboutClick}
-                    className="px-5 md:px-6 py-2.5 md:py-3 rounded-full border text-sm font-medium text-slate-800 dark:text-slate-200 border-slate-400 hover:bg-slate-100 transition-colors"
+                    className="px-5 md:px-6 py-2.5 md:py-3 rounded-full border text-sm font-medium text-zinc-800 dark:text-zinc-200 border-slate-400 hover:bg-slate-100 hover:dark:text-zinc-800 transition-colors"
                 >
                     Learn More About Me
                 </button>
