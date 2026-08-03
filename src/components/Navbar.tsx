@@ -7,6 +7,7 @@ import {
     ListAltOutlined,
 } from "@mui/icons-material";
 import {ChevronLeft, ChevronRight, HomeIcon} from "lucide-react";
+import {useEffect, useRef} from "react";
 
 function Navbar({
     currentSection,
@@ -17,8 +18,18 @@ function Navbar({
     collapsed,
     onToggleCollapse
 }: NavbarProps) {
+    const navRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            onToggleCollapse();
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <>
+        <div ref={navRef}>
             <nav
                 className={
                 `fixed bottom-4 left-1/2 -translate-x-1/2 z-50
@@ -120,7 +131,7 @@ function Navbar({
             >
                 {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
             </button>
-        </>
+        </div>
 
     );
 }

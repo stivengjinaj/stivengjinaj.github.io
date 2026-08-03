@@ -3,6 +3,7 @@ import type {ReactNode, RefObject} from "react";
 export type SectionLabel = 'landing' | 'about' | 'projects';
 export type ThemeType = 'light' | 'dark';
 export type ThemeColor = 'red' | 'blue';
+export type ProjectType = 'all' | 'ai' | 'web' | 'mobile' | 'optimization';
 export type ThemeContextType = {
     theme: ThemeType;
     toggleTheme: () => void;
