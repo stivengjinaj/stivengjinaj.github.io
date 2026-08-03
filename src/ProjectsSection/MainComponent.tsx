@@ -1,6 +1,7 @@
 import type {ProjectType} from "../types/types.ts";
 import {useState} from "react";
 import Project from "./Project.tsx";
+import {projects} from "../types/data.ts";
 
 
 function MainComponent () {
@@ -38,14 +39,23 @@ function MainComponent () {
                 </button>
 
                 <button
-                    onClick={() => handleCategoryChange('optimization')}
-                    className={`${projectCategory !== 'optimization' && 'hover:bg-gray-300 dark:hover:bg-zinc-800'} leading-tight text-sm rounded-2xl px-3 py-1 ${projectCategory == 'optimization' ? 'text-white bg-emerald-950 dark:bg-emerald-800' : 'text-gray-800 dark:text-gray-100 bg-transparent'}`}>
+                    onClick={() => handleCategoryChange('optimisation')}
+                    className={`${projectCategory !== 'optimisation' && 'hover:bg-gray-300 dark:hover:bg-zinc-800'} leading-tight text-sm rounded-2xl px-3 py-1 ${projectCategory == 'optimisation' ? 'text-white bg-emerald-950 dark:bg-emerald-800' : 'text-gray-800 dark:text-gray-100 bg-transparent'}`}>
                     Optimization
                 </button>
             </div>
             <div className="grid gap-3 lg:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-5">
-                <Project />
-                <Project />
+                {projects.filter((project) => {
+                    return projectCategory === 'all' || project.category === projectCategory;
+                }).map((project) => (
+                    <Project
+                        title={project.title}
+                        thumbnail={project.thumbnail}
+                        category={project.category}
+                        description={project.description}
+                        link={project.link}
+                    />
+                ))}
             </div>
         </>
 

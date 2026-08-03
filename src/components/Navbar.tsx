@@ -106,6 +106,9 @@ function Navbar({
 
                         <button
                             className="p-2.5 xl:px-3 xl:py-3 rounded-full bg-emerald-950 hover:bg-emerald-700  text-white hover:text-white dark:hover:text-white dark:hover:text-amber-700 transition-colors"
+                            onClick={() => {
+                                window.open("/CV.pdf", "_blank");
+                            }}
                             aria-label="Resume"
                         >
                             <ListAltOutlined fontSize="medium" />

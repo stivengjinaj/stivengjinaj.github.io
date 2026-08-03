@@ -3,7 +3,7 @@ import type {ReactNode, RefObject} from "react";
 export type SectionLabel = 'landing' | 'about' | 'projects';
 export type ThemeType = 'light' | 'dark';
 export type ThemeColor = 'red' | 'blue';
-export type ProjectType = 'all' | 'ai' | 'web' | 'mobile' | 'optimization';
+export type ProjectType = 'all' | 'ai' | 'web' | 'mobile' | 'optimisation';
 export type ThemeContextType = {
     theme: ThemeType;
     toggleTheme: () => void;
@@ -60,4 +60,12 @@ export interface PublicationProp {
 export interface ViewMoreProps {
     title: string;
     onClick: () => void;
+}
+
+export interface ProjectsProps {
+    title: string;
+    thumbnail: string;
+    category: ProjectType;
+    description: string;
+    link: string;
 }
