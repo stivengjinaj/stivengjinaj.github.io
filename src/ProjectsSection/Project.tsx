@@ -3,7 +3,7 @@ import type {ProjectsProps} from "../types/types.ts";
 
 function Project({title, thumbnail, category, description, link}: ProjectsProps) {
     return (
-        <div className="flex flex-col items-start justify-between p-5 rounded-xl backdrop-blur-sm bg-zinc-300/60 dark:bg-zinc-900/60">
+        <div className="flex flex-col items-start justify-between p-5 rounded-xl backdrop-blur-sm bg-zinc-50/10 dark:bg-zinc-900/30">
             <div>
                 <div className="w-full aspect-video overflow-hidden rounded-xl">
                     {thumbnail.endsWith(".mp4") ? (

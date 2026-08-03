@@ -4,7 +4,7 @@ import unibo from "../assets/unibo.svg"
 
 function AcademicCard(){
     return (
-        <div className="flex w-full flex-col opacity-90 bg-zinc-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 shadow-xl rounded-xl px-6 md:px-10 lg:px-20 py-8">
+        <div className="flex w-full flex-col backdrop-blur-sm bg-zinc-50/10 dark:bg-zinc-900/30 border border-gray-200 dark:border-zinc-800 shadow-xl rounded-xl px-6 md:px-10 lg:px-20 py-8">
             <div className="relative flex items-center">
                 <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight ms-5">Academic Preparation</h2>
             </div>

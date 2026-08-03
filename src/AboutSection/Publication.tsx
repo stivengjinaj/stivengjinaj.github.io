@@ -4,7 +4,7 @@ import {NewspaperIcon, SquareArrowOutUpRight} from "lucide-react";
 
 function Publications ({title, conference, link}: PublicationProp) {
     return (
-        <div className="flex items-center gap-4 rounded-xl bg-zinc-100 dark:bg-transparent dark:border dark:border-zinc-700 p-3">
+        <div className="flex items-center gap-4 rounded-xl backdrop-blur-sm bg-zinc-100/80 dark:bg-transparent dark:border dark:border-zinc-700 p-3">
             <div className="bg-zinc-200 dark:bg-transparent dark:border dark:border-zinc-700 rounded-xl p-6">
                 <NewspaperIcon className="dark:text-gray-300"/>
             </div>

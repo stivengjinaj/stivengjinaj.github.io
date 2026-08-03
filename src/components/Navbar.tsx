@@ -34,18 +34,17 @@ function Navbar({
                 className={
                 `fixed bottom-4 left-1/2 -translate-x-1/2 z-50
                 w-fit max-w-[92vw]
-                bg-white/25 backdrop-blur-2xl backdrop-saturate-200
-                border border-white/40
-                rounded-full shadow-lg shadow-black/50
+                bg-white/10 backdrop-blur-sm
+                rounded-full shadow-sm shadow-black/30
                 px-7 py-2
 
                 xl:top-1/2 xl:left-6 xl:translate-x-0 xl:-translate-y-1/2
                 xl:w-24 xl:h-[70vh] xl:max-w-none xl:px-1 xl:py-4
-                xl:rounded-[40px] xl:bg-white
+                xl:rounded-[40px] xl:bg-white/10
                 xl:dark:bg-zinc-900
                 xl:backdrop-blur-none
                 xl:backdrop-saturate-100
-                xl:dark:shadow-gray-800/100
+                xl:dark:shadow-zinc-800/100
                 xl:border-0 xl:shadow
                 
                 xl:transition-[transform,opacity] xl:duration-500 xl:ease-in-out
