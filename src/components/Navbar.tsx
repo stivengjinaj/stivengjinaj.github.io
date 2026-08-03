@@ -16,6 +16,7 @@ function Navbar({
     onLandingClick,
     onAboutClick,
     onProjectClick,
+    onContactClick,
     collapsed,
     onToggleCollapse
 }: NavbarProps) {
@@ -108,7 +109,7 @@ function Navbar({
                             className="hover:text-amber-900 dark:text-white dark:hover:text-amber-700 transition-colors"
                             onClick={() => {
                                 setCurrentSection("contact")
-                                onProjectClick()
+                                onContactClick()
                             }}
                             aria-label="Contact"
                         >

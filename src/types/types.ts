@@ -15,6 +15,7 @@ export interface NavbarProps {
     onLandingClick: () => void;
     onAboutClick: () => void;
     onProjectClick: () => void;
+    onContactClick: () => void;
     collapsed: boolean;
     onToggleCollapse: () => void;
 }

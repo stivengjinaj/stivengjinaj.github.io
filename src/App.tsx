@@ -12,13 +12,14 @@ import ProjectsSection from "./ProjectsSection/ProjectsSection.tsx";
 import ContactSection from "./ContactSection/ContactSection.tsx";
 
 function App() {
-    // 0-home, 1-about, 2-projects, 3-contact me
+    // 0-home, 1-about, 2-projects, 3-contact
     const [currentSection, setCurrentSection] = useState<SectionLabel>('landing');
     const [navCollapsed, setNavCollapsed] = useState(false);
     const landingRef = useRef<HTMLDivElement>(null);
     const aboutRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<HTMLDivElement>(null)
     const contactRef = useRef<HTMLDivElement>(null)
+
     const {theme} = useTheme();
     const mainStyle = {
         backgroundImage: `url(${theme === "light" ? backgroundImage : backgroundDark})`,
@@ -56,6 +57,7 @@ function App() {
                 onLandingClick={() => landingRef.current?.scrollIntoView({ behavior: "smooth" })}
                 onAboutClick={() => aboutRef.current?.scrollIntoView({ behavior: "smooth" })}
                 onProjectClick={() => projectsRef.current?.scrollIntoView({ behavior: "smooth" })}
+                onContactClick={() => contactRef.current?.scrollIntoView({ behavior: "smooth" })}
                 collapsed={navCollapsed}
                 onToggleCollapse={() => setNavCollapsed((c) => !c)}
             />
