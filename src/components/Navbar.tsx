@@ -1,12 +1,13 @@
 import type { NavbarProps } from "../types/types.ts";
 import {
+    AccountCircle, AccountCircleOutlined,
     AccountTree,
-    AccountTreeOutlined,
+    AccountTreeOutlined, HomeOutlined, HomeRounded,
     Info,
     InfoOutlined,
     ListAltOutlined,
 } from "@mui/icons-material";
-import {ChevronLeft, ChevronRight, HomeIcon} from "lucide-react";
+import {ChevronLeft, ChevronRight} from "lucide-react";
 import {useEffect, useRef} from "react";
 
 function Navbar({
@@ -39,7 +40,7 @@ function Navbar({
                 px-7 py-2
 
                 xl:top-1/2 xl:left-6 xl:translate-x-0 xl:-translate-y-1/2
-                xl:w-24 xl:h-[70vh] xl:max-w-none xl:px-1 xl:py-4
+                xl:w-18 xl:h-[65vh] xl:max-w-none xl:px-1 xl:py-4
                 xl:rounded-[40px] xl:bg-white/10
                 xl:dark:bg-zinc-900
                 xl:backdrop-blur-none
@@ -52,10 +53,10 @@ function Navbar({
 
                 `}
             >
-                <div className="flex items-center justify-between gap-8 xl:flex-col xl:h-full xl:justify-between xl:gap-0 xl:py-4">
-                    <h2 className="hidden xl:block text-2xl font-bold text-red-950 dark:text-amber-700 tracking-tight">
+                <div className="flex items-center justify-around gap-8 xl:flex-col xl:h-full xl:justify-between xl:gap-0 xl:py-4">
+                    {/*<h2 className="hidden xl:block text-2xl font-bold text-red-950 dark:text-amber-700 tracking-tight">
                         S.GJ
-                    </h2>
+                    </h2>*/}
 
                     <div className="flex items-center gap-8 text-emerald-950 xl:flex-col xl:gap-20">
                         <button
@@ -67,9 +68,9 @@ function Navbar({
                             aria-label="Home"
                         >
                             {currentSection === "landing" ? (
-                                <HomeIcon size={24} strokeWidth={3.5} />
+                                <HomeRounded className="text-2xl" />
                             ) : (
-                                <HomeIcon size={24} />
+                                <HomeOutlined />
                             )}
                         </button>
 
@@ -100,6 +101,21 @@ function Navbar({
                                 <AccountTree fontSize="medium" />
                             ) : (
                                 <AccountTreeOutlined fontSize="medium" />
+                            )}
+                        </button>
+
+                        <button
+                            className="hover:text-amber-900 dark:text-white dark:hover:text-amber-700 transition-colors"
+                            onClick={() => {
+                                setCurrentSection("contact")
+                                onProjectClick()
+                            }}
+                            aria-label="Contact"
+                        >
+                            {currentSection === "contact" ? (
+                                <AccountCircle fontSize="medium" />
+                            ) : (
+                                <AccountCircleOutlined fontSize="medium" />
                             )}
                         </button>
 

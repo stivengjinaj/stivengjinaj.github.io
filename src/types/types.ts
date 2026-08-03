@@ -1,6 +1,6 @@
 import type {ReactNode, RefObject} from "react";
 
-export type SectionLabel = 'landing' | 'about' | 'projects';
+export type SectionLabel = 'landing' | 'about' | 'projects' | 'contact';
 export type ThemeType = 'light' | 'dark';
 export type ThemeColor = 'red' | 'blue';
 export type ProjectType = 'all' | 'ai' | 'web' | 'mobile' | 'optimisation';

@@ -9,6 +9,7 @@ import {useTheme} from "./hooks/useTheme.ts";
 import type {SectionLabel} from "./types/types.ts";
 import AboutSection from "./AboutSection/AboutSection.tsx";
 import ProjectsSection from "./ProjectsSection/ProjectsSection.tsx";
+import ContactSection from "./ContactSection/ContactSection.tsx";
 
 function App() {
     // 0-home, 1-about, 2-projects, 3-contact me
@@ -17,6 +18,7 @@ function App() {
     const landingRef = useRef<HTMLDivElement>(null);
     const aboutRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<HTMLDivElement>(null)
+    const contactRef = useRef<HTMLDivElement>(null)
     const {theme} = useTheme();
     const mainStyle = {
         backgroundImage: `url(${theme === "light" ? backgroundImage : backgroundDark})`,
@@ -40,6 +42,7 @@ function App() {
         observer.observe(landingRef.current as HTMLDivElement);
         observer.observe(aboutRef.current as HTMLDivElement);
         observer.observe(projectsRef.current as HTMLDivElement);
+        observer.observe(contactRef.current as HTMLDivElement);
 
         return () => observer.disconnect();
     }, []);
@@ -77,6 +80,7 @@ function App() {
                 />
                 <AboutSection ref={aboutRef}/>
                 <ProjectsSection ref={projectsRef}/>
+                <ContactSection ref={contactRef}/>
             </main>
             <ThemeToggleButton />
         </div>
