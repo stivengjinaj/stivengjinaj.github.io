@@ -3,16 +3,12 @@ import type {Dispatch, SetStateAction} from "react";
 import {professionalData} from "../types/data.ts";
 import Job from "./Job.tsx";
 
-function ViewMoreModal({
-                           open,
-                           setOpen
-                       }: {
+function ViewMoreModal({open, setOpen}: {
     open: boolean;
     setOpen: Dispatch<SetStateAction<boolean>>;
 }) {
     return (
         <Dialog open={open} onClose={() => setOpen(false)}>
-            {/* Backdrop */}
             <DialogBackdrop
                 transition
                 className="
@@ -31,58 +27,48 @@ function ViewMoreModal({
                         transition
                         className="
                             relative
+                            flex flex-col
                             w-full
                             max-w-2xl
-                            max-h-[60vh]
+                            h-[60vh]
 
                             overflow-hidden
                             rounded-3xl
 
                             bg-white/70
-                            dark:bg-zinc-900/10
+                            dark:bg-zinc-50/10
 
                             backdrop-blur-xs
 
-                            border
-                            border-white/40
+                            border border-white/40
                             dark:border-zinc-700/50
 
                             shadow-2xl
                             shadow-black/10
-
-                            transition-all
-                            duration-300
-
-                            data-closed:opacity-0
-                            data-closed:scale-95
-                        "
-                    >
+                        ">
                         <div
                             className="
                                 absolute inset-0
-                                bg-gradient-to-br
-                                from-white/20
-                                to-transparent
-                                pointer-events-none
-                            "
+
+                                pointer-events-none"
                         />
 
-                        <div className="relative flex max-h-[80vh] flex-col px-10 py-6">
-                            <h2 className="mb-5 text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+                        <div className="relative px-10 pt-6 shrink-0">
+                            <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
                                 Professional Experience
                             </h2>
+                        </div>
 
-                            <div className="overflow-y-auto">
-                                {professionalData.map((job) => (
-                                    <Job
-                                        key={`${job.company}-${job.jobTitle}`}
-                                        date={job.date}
-                                        jobTitle={job.jobTitle}
-                                        company={job.company}
-                                        description={job.description}
-                                    />
-                                ))}
-                            </div>
+                        <div className="relative flex-1 overflow-y-auto px-10 pb-6">
+                            {professionalData.map((job, i) => (
+                                <Job
+                                    key={`${job.company}-${job.jobTitle}-${i}`}
+                                    date={job.date}
+                                    jobTitle={job.jobTitle}
+                                    company={job.company}
+                                    description={job.description}
+                                />
+                            ))}
                         </div>
                     </DialogPanel>
                 </div>

@@ -2,7 +2,7 @@ import type {JobProps} from "../types/types.ts";
 
 function Job({date, jobTitle, company, description}: JobProps) {
     return (
-        <div className="flex gap-4 items-stretch w-full">
+        <div className="flex gap-4 items-stretch w-full mt-5">
             <div className="hidden lg:flex flex-col items-center shrink-0">
                 <div className="w-3 h-3 rounded-full bg-blue-900 dark:bg-zinc-400 mt-2" />
                 <div className="w-0.5 flex-1 bg-gray-300 dark:bg-zinc-700 mt-1" />

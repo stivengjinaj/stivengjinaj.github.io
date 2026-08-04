@@ -5,11 +5,11 @@ import {LinkedIn} from "@mui/icons-material";
 
 function ContactSection({ref}: RefSection) {
     return (
-        <section id={"contact"} ref={ref} className="min-h-screen pl-20 pr-10 gap-2 flex flex-col items-center justify-center snap-start relative overflow-hidden">
+        <section id={"contact"} ref={ref} className="min-h-screen pb-30 pt-10 md:pt-0 md:pl-20 md:pr-10 gap-1 flex flex-col items-center justify-center snap-start relative overflow-hidden">
             <h1 className="text-amber-900 dark:text-zinc-300 font-bold text-5xl">Get in Touch</h1>
             <h3 className="text-amber-700 dark:text-zinc-100 font-semibold text-md">Let's bring our ideas to life</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 justify-center items-center mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 justify-center items-center mt-10 md:mt-20">
                 <div className="flex flex-col items-center rounded-2xl bg-zinc-600/10 backdrop-blur-sm px-13 py-10">
                     <Phone className="text-amber-800 dark:text-zinc-300" size={60}/>
                     <div className="w-full flex flex-col mt-10 gap-2">

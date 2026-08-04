@@ -13,11 +13,11 @@ function MainComponent () {
 
     return (
         <>
-            <div className="flex items-start mt-5 gap-2">
+            <div className="flex flex-1 flex-wrap justify-center items-start mt-5 gap-2">
                 <button
                     onClick={() => handleCategoryChange('all')}
                     className={`${projectCategory !== 'all' && 'hover:bg-gray-300 dark:hover:bg-zinc-800'} leading-tight text-sm rounded-2xl px-3 py-1 ${projectCategory == 'all' ? 'text-white bg-emerald-950 dark:bg-emerald-800' : 'text-gray-800 dark:text-gray-100 bg-transparent'}`}>
-                    All Projects
+                    All
                 </button>
 
                 <button
