@@ -15,13 +15,13 @@ function HeroText({onAboutClick, onProjectClick}: HeroTextProps) {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4 pt-2">
                 <button
                     onClick={onProjectClick}
-                    className="px-5 md:px-6 py-2.5 md:py-3 rounded-full border border-slate-900 dark:border-gray-800 bg-slate-900 dark:bg-gray-700 text-white dark:text-white text-sm font-medium hover:bg-slate-800 transition-colors shadow-sm"
+                    className="px-5 md:px-6 py-2.5 md:py-3 rounded-full border border-slate-900  bg-slate-900  text-white dark:text-white text-sm font-medium hover:bg-slate-800 hover:border-slate-800 transition-colors shadow-sm"
                 >
                     View My Projects
                 </button>
                 <button
                     onClick={onAboutClick}
-                    className="px-5 md:px-6 py-2.5 md:py-3 rounded-full border text-sm font-medium text-zinc-800 dark:text-zinc-200 border-slate-400 hover:bg-slate-100 hover:dark:text-zinc-800 transition-colors"
+                    className="px-5 md:px-6 py-2.5 md:py-3 rounded-full border text-sm font-medium text-zinc-800 dark:text-zinc-200 border-slate-400 hover:bg-zinc-300 dark:hover:text-zinc-700 transition-colors"
                 >
                     Learn More About Me
                 </button>
