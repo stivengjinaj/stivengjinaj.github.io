@@ -34,11 +34,11 @@ function Navbar({
         <div ref={navRef}>
             <nav
                 className={
-                `fixed bottom-4 left-1/2 -translate-x-1/2 z-50
+                `fixed bottom-2 left-1/2 -translate-x-1/2 z-50
                 w-fit max-w-[92vw]
                 bg-white/10 backdrop-blur-sm
                 rounded-full shadow-sm shadow-black/30
-                px-7 py-2
+                px-7 py-1
 
                 xl:top-1/2 xl:left-6 xl:translate-x-0 xl:-translate-y-1/2
                 xl:w-18 xl:h-[65vh] xl:max-w-none xl:px-1 xl:py-4
@@ -55,10 +55,6 @@ function Navbar({
                 `}
             >
                 <div className="flex items-center justify-around gap-8 xl:flex-col xl:h-full xl:justify-between xl:gap-0 xl:py-4">
-                    {/*<h2 className="hidden xl:block text-2xl font-bold text-red-950 dark:text-amber-700 tracking-tight">
-                        S.GJ
-                    </h2>*/}
-
                     <div className="flex items-center gap-8 text-emerald-950 xl:flex-col xl:gap-20">
                         <button
                             className="hover:text-amber-900 dark:text-white dark:hover:text-amber-700 transition-colors"

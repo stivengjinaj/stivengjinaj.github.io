@@ -37,7 +37,7 @@ function App() {
                     }
                 })
             },
-            { threshold: 0.5 }
+            { threshold: 0.1 }
         )
 
         observer.observe(landingRef.current as HTMLDivElement);
