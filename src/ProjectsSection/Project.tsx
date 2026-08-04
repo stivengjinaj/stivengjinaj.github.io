@@ -33,6 +33,7 @@ function Project({title, thumbnail, category, description, link}: ProjectsProps)
 
             <button
                 onClick={() => window.open(link, "_blank")}
+                disabled={link.length === 0}
                 className="flex items-center gap-2 mt-3 bg-black hover:bg-zinc-900 py-1 px-3 rounded-2xl"
             >
                 {link.length == 0

@@ -1,4 +1,4 @@
-import type {ProjectsProps} from "./types.ts";
+import type {JobProps, ProjectsProps} from "./types.ts";
 
 export const projects: ProjectsProps[] = [
     {
@@ -56,5 +56,26 @@ export const projects: ProjectsProps[] = [
         category: "mobile",
         description: "Horus is a WearOS application used to produce different flashlight modes on user's WearOS smartwatch.",
         link: "https://github.com/stivengjinaj/Horus"
+    }
+]
+
+export const professionalData: JobProps[] = [
+    {
+        date: "23 June 2026 - Present",
+        jobTitle: "Research Fellow (AI & Data Science)",
+        company: "Politecnico di Torino",
+        description: "Integrate AI in energetics. Handling of the AI core of the project, by building, training, validating and deploying."
+    },
+    {
+        date: "February 2025 - September 2025",
+        jobTitle: "Full Stack Developer",
+        company: "Freelance",
+        description: "Designed a full-stack platform for online competitions, implementing algorithms for dynamic score calculation and referral systems."
+    },
+    {
+        date: "October 2025",
+        jobTitle: "Hackathon Participant - TinyHack",
+        company: "Focoos AI, Z-Ant, Arduino",
+        description: "Developed an end-to-end Edge AI system for real-time image classification on Arduino Nicla Vision"
     }
 ]
